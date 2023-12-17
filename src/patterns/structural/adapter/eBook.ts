@@ -1,14 +1,14 @@
 export interface EBookInterface {
-  openFile(): void;
-  nexPage(): void;
+    openFile(): void;
+    nexPage(): void;
 }
 
 export class EBook implements EBookInterface {
-  openFile(): void {
-    console.log("File open");
-  }
+    openFile(): void {
+        console.log("File open");
+    }
 
-  nexPage(): void {
-    console.log("Next page");
-  }
+    nexPage(): void {
+        console.log("Next page");
+    }
 }

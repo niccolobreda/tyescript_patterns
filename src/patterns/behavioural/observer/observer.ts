@@ -1,16 +1,16 @@
 interface ObserverInteface {
-  id: string;
-  handle(): void;
+    id: string;
+    handle(): void;
 }
 
 export class Observer implements ObserverInteface {
-  id: string;
+    id: string;
 
-  constructor(id: string) {
-    this.id = id;
-  }
+    constructor(id: string) {
+        this.id = id;
+    }
 
-  handle() {
-    console.log(this.id);
-  }
+    handle() {
+        console.log(this.id);
+    }
 }

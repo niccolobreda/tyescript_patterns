@@ -1,15 +1,16 @@
 {
-  "name": "playground",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "test",
-    "app": "npx tsc && node ./dist/index.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "typescript": "^5.3.3"
-  }
+    "name": "playground",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "test",
+        "app": "npx tsc && node ./dist/index.js",
+        "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\""
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "typescript": "^5.3.3"
+    }
 }

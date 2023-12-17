@@ -2,17 +2,17 @@ import { BookInterface } from "./book";
 import { EBookInterface } from "./eBook";
 
 export class EBookAdapter implements BookInterface {
-  private eBook: EBookInterface;
+    private eBook: EBookInterface;
 
-  constructor(eBook: EBookInterface) {
-    this.eBook = eBook;
-  }
+    constructor(eBook: EBookInterface) {
+        this.eBook = eBook;
+    }
 
-  open(): void {
-    this.eBook.openFile();
-  }
+    open(): void {
+        this.eBook.openFile();
+    }
 
-  turnPage(): void {
-    this.eBook.nexPage();
-  }
+    turnPage(): void {
+        this.eBook.nexPage();
+    }
 }

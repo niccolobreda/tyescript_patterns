@@ -1,6 +1,33 @@
-import { Consumer } from "./consumer";
-import { LogToDatabase } from "./logToDatabese";
-import { LogToFile } from "./logToFile";
-import { LogToService } from "./logToService";
+interface Logger {
+    log(data: { [key: string]: any }): void;
+}
 
-export { Consumer, LogToDatabase, LogToFile, LogToService };
+export class LogToDatabase implements Logger {
+    log(data: { [key: string]: any }): void {
+        console.log(`Logging the following data to db:
+            ${data}
+        `);
+    }
+}
+
+export class LogToFile implements Logger {
+    log(data: { [key: string]: any }): void {
+        console.log(`Logging the following data to file:
+            ${data}
+        `);
+    }
+}
+
+export class LogToService implements Logger {
+    log(data: { [key: string]: any }): void {
+        console.log(`Loggeing the following data to Saas:
+            ${data}
+        `);
+    }
+}
+
+export class Consumer {
+    public log(data: { [key: string]: any }, logger: Logger) {
+        logger.log(data);
+    }
+}
